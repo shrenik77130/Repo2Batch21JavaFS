@@ -1,0 +1,99 @@
+<div class="row">
+
+    <div class="col-md-6">
+
+        <div *ngIf="isSuccess" class="alert alert-success" role="alert">
+            Sign Up Successfull
+        </div>
+
+        <div *ngIf="isFailed" class="alert alert-danger" role="alert">
+            Some form fields are missing.
+        </div>
+
+
+
+        <div class="card">
+            <div class="card-header">
+                <h1>User Form</h1>
+            </div>
+
+            <div class="card-body">
+
+                <form #userform="ngForm" (ngSubmit)="saveUserRecord(userform.value)">
+
+                    <div class="row m-2">
+                        <div class="col-md-6">
+                            <input type="text" placeholder="Username" class="form-control" name="txtUsername" ngModel>
+                        </div>
+                    </div>
+
+                    <div class="row m-2">
+                        <div class="col-md-6">
+                            <input type="email" placeholder="Email Id" class="form-control" name="txtEmailId" ngModel>
+                        </div>
+                    </div>
+
+
+                    <div class="row m-2">
+                        <div class="col-md-6">
+                            <input type="radio" id="male" name="gender" class="col-md-1" value="male" ngModel>
+                            <label for="male" class="pl-2">Male</label>
+                            <input type="radio" id="female" name="gender" class="col-md-1" value="Female" ngModel>
+                            <label for="female" class="pl-2">Female</label>
+                        </div>
+                    </div>
+
+
+                    <div class="row m-2">
+                        <div class="col-md-6">
+                            <select name="dropdownLocation" class="form-control" ngModel>
+                                <option *ngFor="let key of locations" value="{{key.pincode}}">{{key.city}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="row m-2">
+                        <div class="col-md-6">
+                            <input type="password" placeholder="Password" class="form-control" name="txtPassword" ngModel>
+                        </div>
+                    </div>
+
+                    <div class="row m-2">
+                        <div class="col-md-6">
+                            <input type="password" placeholder="Confirm Password" class="form-control"
+                                name="txtConfirmPassword" ngModel>
+                        </div>
+                    </div>
+
+                    <div class="row m-2">
+                        <div class="col-md-6">
+                            <input type="submit" value="Submit" class="btn btn-primary">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <table class="table table-hover m-1">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email Id</th>
+                    <th>Location</th>
+                </tr>
+
+                <tr *ngFor="let rec of readTable()">
+                    <td>{{rec.username}}</td>
+                    <td>{{rec.emailid}}</td>
+                    <td>{{rec.location}}</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,17 @@
+.logo
+{
+    /* border:1px solid; */
+    width:700px;
+    display: inline-block;
+}
+
+.links{
+    width:300px;
+    /* border:1px solid; */
+    display: inline-block;
+    text-align: right;
+}
+
+input[type="button"]{
+    margin:2px;
+}

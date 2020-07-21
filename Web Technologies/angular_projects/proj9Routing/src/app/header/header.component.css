@@ -1,0 +1,18 @@
+ul{
+    padding:5px;
+    list-style: none;
+}
+
+li{
+    width:100px;
+    margin-left:50px;
+    margin-right:50px;
+    padding:7px;
+    text-align: center;
+    display: inline-block;
+    border:1px solid;
+}
+
+li:hover{
+    background-color: yellow;
+}

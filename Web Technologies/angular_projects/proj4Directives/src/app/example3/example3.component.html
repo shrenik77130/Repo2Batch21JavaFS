@@ -1,0 +1,29 @@
+<h3>List Items of Cities from TypeScript Array</h3>
+<hr>
+<ul>
+    <li *ngFor="let key of cities">{{key}}</li>
+ </ul>
+
+ <h3>Drop Down Items from TypeScript Array</h3>
+ <hr>
+ <select id="dropdownCities">
+	<option *ngFor="let key of cities" value="{{key}}">{{key}}</option>
+</select>
+
+
+<h3>Tablular Records of Courses</h3>
+<hr>
+
+<table>
+    <thead> 
+        <th>Course Name</th>
+        <th>Duration</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let key of course">
+            <td>{{key.coursename}}</td>
+            <td>{{key.duration}}</td>
+        </tr>
+    </tbody>
+</table>

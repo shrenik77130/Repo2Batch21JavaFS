@@ -1,0 +1,50 @@
+<h3>*ngIf Example 1</h3>
+
+<p *ngIf="result;">Student is Pass</p>
+
+<p *ngIf="!result;">Student is Fail</p>
+
+<input type="button" value="Click to change Result" (click)="changeResult()">
+
+
+<h3>*ngIf Example 2</h3>
+
+
+<p *ngIf="favday == 'sat' || favday=='sun' ">{{favday}} is Weekend</p>
+<p *ngIf="favday == 'mon' || favday=='tue' || favday=='wedn' || favday=='thur' || favday=='fri' ">{{favday}} is Working day</p>
+
+
+<h3>*ngIf Example 3</h3>
+
+<input type="text" placeholder="Enter username" #username>
+<input type="password" placeholder="Enter Password" #password>
+
+<input type="button" value="Login" (click)="checkLogin(username.value,password.value)">
+
+<p id="success" *ngIf="(username.value=='admin' && password.value=='admin') else elseTemplate">Login Successfull</p>
+
+
+
+<ng-template #elseTemplate>
+  <p id="failed">Invalid Username or Password</p>  
+</ng-template>
+
+
+<hr>
+<p *ngIf="status; else test">This is Sample Text</p>
+
+<ng-template #test>
+  <p>This is Test. You are inside Else</p>
+</ng-template>
+
+
+<hr>
+
+<!-- <ng-template [ngIf]="isUserLoggedIn" [ngIfElse]="userTemplate">
+  <p>Hi.. User. Welcome to Angular Application</p>
+</ng-template>
+
+
+<ng-tempalte #userTemplate>
+  <p>Please Login in Angular Application</p>
+</ng-tempalte> --> 

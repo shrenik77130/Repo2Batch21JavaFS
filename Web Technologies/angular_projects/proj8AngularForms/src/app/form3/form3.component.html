@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+
+            <div class="card-header">
+                <h1>ngModel Directive Event+Property Binding</h1>
+                <h5>-> Submit Angular Template Driven Form</h5>
+            </div>
+
+            <div class="card-body">
+                <input type="text" placeholder="Product Code" name="txtProductCode" class="form-control m-1" [(ngModel)]="prodObject.prodcode">
+                <input type="text" placeholder="Product Name" name="txtProductName" class="form-control m-1" [(ngModel)]="prodObject.prodname">
+                <input type="text" placeholder="Product Price" name="txtPrice" class="form-control m-1" [(ngModel)]="prodObject.price">
+                <input type="number" placeholder="Qtys" name="txtQtys" class="form-control m-1" [(ngModel)]="prodObject.qtys">
+                <label for="" class="text-success border-secondary m-2"></label>
+                <input type="button" value="Purchase" class="btn btn-primary m-1">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <h4 class="text-white bg-dark p-2">Product Details</h4>
+        <p>Product Code : {{prodObject.prodcode}}</p>
+        <p>Product Name : {{prodObject.prodname}}</p>
+        <p>Product Price : {{prodObject.price}}</p>
+        <p>Product Qtys : {{prodObject.qtys}}</p>
+    </div>
+
+</div>

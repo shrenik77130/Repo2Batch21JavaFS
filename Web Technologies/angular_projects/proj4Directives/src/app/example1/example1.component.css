@@ -1,0 +1,9 @@
+#success{
+    color:green;
+    font:normal 24px 'calibri';
+}
+
+#failed{
+    color:red;
+    font:normal 24px 'calibri';
+}

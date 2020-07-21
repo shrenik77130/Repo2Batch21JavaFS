@@ -1,0 +1,19 @@
+.single{
+    list-style: none;
+    width:30px;
+    border:1px solid;
+    padding:5px;
+    margin:10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.table1{
+    border:1px solid;
+    border-collapse: collapse;
+}
+
+th,td{
+    border:1px solid;
+    padding:10px;
+}

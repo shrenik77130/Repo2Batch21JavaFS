@@ -1,0 +1,35 @@
+<h3>Print Array values of variable x</h3>
+<hr>
+
+<ul>
+    <li class="single" *ngFor="let v of x">{{v}}</li>
+</ul>
+
+
+<h3>Print Associative Array Records</h3>
+<hr>
+
+<table class="table1">
+    <thead>
+        <tr>
+            <th>Emp Code</th>
+            <th>Emp Name</th>
+            <th>Items Sold</th>
+            <th>Amount Collected</th>
+            <th>Insentive</th>
+            <th>Commission</th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+        <tr *ngFor="let row of records">
+            <td>{{row.empcode}}</td>
+            <td>{{row.empname}}</td>
+            <td>{{row.items_sold}}</td>
+            <td> {{row.amount | currency:'INR'}}</td>
+            <td> {{row.amount*row.insentive/100 | currency:'INR'}}</td>
+            <td> {{row.amount*row.commision/100 | currency:'INR'}}</td>
+        </tr>
+    </tbody>
+</table>
